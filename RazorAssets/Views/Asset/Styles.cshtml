@@ -1,0 +1,12 @@
+﻿@model List<RazorAssets.Models.Element>
+@{
+    Layout = null;
+}
+
+@foreach (var element in Model) { 
+    @('#' + element.Id) <text>
+    { 
+        background: @element.Color; 
+    }
+    </text>
+}

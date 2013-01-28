@@ -1,0 +1,15 @@
+﻿@model List<RazorAssets.Models.Element>
+@{
+    ViewBag.Title = "Sandbox";
+}
+
+<h2>@Model.Count squares</h2>
+<p>Add <code>/?count=[number]</code> to the URL (i.e. <code>/?count=50</code>) to change the number of squares.</p>
+
+@foreach (var element in Model) { 
+    <div id="@element.Id" class="element"></div>
+}
+
+@section styles {
+    <link rel="stylesheet" href="@Url.Action("Styles","Asset")" />
+}

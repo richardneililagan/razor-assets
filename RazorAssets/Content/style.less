@@ -1,0 +1,47 @@
+﻿@body-width : 960px;
+
+html {
+    background: #eee;
+    color: #434343;
+}
+
+body {
+    width: @body-width;
+    margin: .8em auto;
+    padding: .8em;
+    border: 1px solid #e0e0e0;
+    border-radius: .32em;
+    background: #fcfcfc;    
+}
+
+.element {
+    @width : (@body-width / 10) - 4;
+    width: @width;
+    height: @width;
+    margin:2px;
+    float:left;
+    background:#ddd;     
+}
+
+//#region Helpers
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+//#endregion Helpers
